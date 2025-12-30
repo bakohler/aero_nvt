@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voos ANAC – Consulta Avançada</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+<h1>✈️ Consulta Avançada de Voos – ANAC</h1>
+
+<div class="painel">
+  <div>
+    <label>Data de referência</label>
+    <input type="date" id="dataReferencia">
+  </div>
+
+  <div>
+    <label>Aeroporto</label>
+    <select id="filtroAeroporto">
+      <option value="TODOS">Todos</option>
+      <option value="SBNT">Navegantes (SBNT)</option>
+    </select>
+  </div>
+
+  <div>
+    <label>Companhia (ICAO)</label>
+    <input type="text" id="filtroEmpresa" placeholder="Ex: AZU, GLO">
+  </div>
+
+  <div>
+    <label>Horário inicial (UTC)</label>
+    <input type="time" id="horaInicio">
+  </div>
+
+  <div>
+    <label>Horário final (UTC)</label>
+    <input type="time" id="horaFim">
+  </div>
+
+  <div>
+    <label>&nbsp;</label>
+    <button id="btnConsultar">Consultar</button>
+  </div>
+</div>
+
+<div class="info" id="info"></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Empresa</th>
+      <th>Voo</th>
+      <th>Origem</th>
+      <th>Destino</th>
+      <th>Partida (UTC)</th>
+      <th>Chegada (UTC)</th>
+      <th>Aeronave</th>
+      <th>Assentos</th>
+      <th>Serviço</th>
+    </tr>
+  </thead>
+  <tbody id="tabela"></tbody>
+</table>
+
+</body>
+</html>
